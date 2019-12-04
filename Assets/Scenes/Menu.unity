@@ -319,7 +319,7 @@ RectTransform:
   m_GameObject: {fileID: 93364518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 285.5946}
-  m_LocalScale: {x: 1.5006484, y: 3.4508493, z: 1}
+  m_LocalScale: {x: 1.5006484, y: 2.674132, z: 1}
   m_Children: []
   m_Father: {fileID: 709933590}
   m_RootOrder: 4
@@ -824,7 +824,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 840441865}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 709933589}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 298345723}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &840441865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1119,7 +1141,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 48.146347
+  field of view: 48.674515
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1144,13 +1166,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 3.8916678e-10, y: 0.010981498, z: -0.000000002395502, w: 0.99993974}
-  m_LocalPosition: {x: 361, y: 206.87474, z: -451}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 365.39, y: 206.87474, z: -451}
   m_LocalScale: {x: 1, y: 1, z: 1.2372}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 1.258, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &963194229
 Animator:
   serializedVersion: 3
@@ -1430,7 +1452,6 @@ GameObject:
   - component: {fileID: 1642261853}
   - component: {fileID: 1642261852}
   - component: {fileID: 1642261851}
-  - component: {fileID: 1642261854}
   m_Layer: 5
   m_Name: btn_opt
   m_TagString: Untagged
@@ -1559,21 +1580,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642261849}
   m_CullTransparentMesh: 0
---- !u!111 &1642261854
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1642261849}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &1694689520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1601,7 +1607,7 @@ RectTransform:
   m_GameObject: {fileID: 1694689520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 285.5946}
-  m_LocalScale: {x: 1.1855826, y: 2.8685465, z: 1}
+  m_LocalScale: {x: 1.0818323, y: 2.3305218, z: 1}
   m_Children: []
   m_Father: {fileID: 709933590}
   m_RootOrder: 5
