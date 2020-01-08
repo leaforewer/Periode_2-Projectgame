@@ -7,6 +7,7 @@ TagManager:
   - Obstackle
   - Obstacle
   - GameOver
+  - Winning
   layers:
   - Default
   - TransparentFX

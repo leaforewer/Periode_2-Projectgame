@@ -14,13 +14,14 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
+    public float gameoverDelay = 1;
 
     private Vector3 startPos;
 
     
 
     Vector3 velocity;
-    bool isGrounded;
+    public bool isGrounded;
 
     // Start is called before the first frame update
     void Start()
@@ -53,13 +54,37 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
-       
+
         //Restart
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             
         }
+    }
+     void OnTriggerEnter(Collider other)
+    {
+
+         if (other.gameObject.CompareTag("Obstackle"))
+        {
+            Debug.Log("Game Over!");
+            Invoke("restartgame", gameoverDelay);
+        }
+
+        if (other.gameObject.CompareTag("Winning"))
+        {
+            Debug.Log("You won!");
+            nextgame();
+        }
+
+    }
+    void restartgame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    void nextgame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 }
