@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
 
+
+    private AudioSource playerAudio;
+    public AudioClip jumpSound;
     public float speed = 12f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
@@ -26,12 +29,13 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         
+        playerAudio = GetComponent<AudioSource>();
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
-
-
+   
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -50,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            playerAudio.PlayOneShot(jumpSound, 1.0f);
+
         }
         velocity.y += gravity * Time.deltaTime;
 
@@ -68,14 +74,16 @@ public class PlayerMovement : MonoBehaviour
 
          if (other.gameObject.CompareTag("Obstackle"))
         {
+            playerAudio.mute = !playerAudio.mute;
             Debug.Log("Game Over!");
             Invoke("restartgame", gameoverDelay);
         }
 
         if (other.gameObject.CompareTag("Winning"))
         {
+            playerAudio.mute = !playerAudio.mute;
             Debug.Log("You won!");
-            nextgame();
+            Invoke("nextgame", 15.0f);
         }
 
     }

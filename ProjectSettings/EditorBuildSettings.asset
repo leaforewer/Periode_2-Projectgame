@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/MainMenu.unity
+    guid: 1384ea0090bf8c346ab316ac7b66f537
+  - enabled: 1
+    path: Assets/Scenes/Verhaal.unity
+    guid: 3d5784b1348b1db4abb0e731201590cd
   - enabled: 1
     path: Assets/Scenes/Maze.unity
     guid: a33458b1014d2d742825e508810b57d7
   - enabled: 1
-    path: Assets/Scenes/Project2.unity
+    path: Assets/Scenes/Marathon.unity
     guid: dc8c9f3efd746429fa6f9482dc779492
   m_configObjects: {}

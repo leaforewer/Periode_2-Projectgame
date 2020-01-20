@@ -6,8 +6,11 @@ TagManager:
   tags:
   - Obstackle
   - Obstacle
-  - GameOver
   - Winning
+  - Complete
+  - Ground
+  - Pick Up
+  - Playerr
   layers:
   - Default
   - TransparentFX

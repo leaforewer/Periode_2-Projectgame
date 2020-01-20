@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
             isOnGround = true;
             dirtParticle.Play();
         } else if (collision.gameObject.CompareTag("Obstackle")){
+
             gameOver = true;
             Debug.Log("Game Over");
             playerAnim.SetBool("Death_b", true);
@@ -97,7 +98,8 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.CompareTag("Complete"))
         {
-            Invoke ("nextgame", 1);
+            playerAudio.mute = !playerAudio.mute;
+            Invoke ("nextgame", 15);
         }
     }
 
@@ -107,7 +109,7 @@ public class PlayerController : MonoBehaviour
     }
     void nextgame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 
     void SetCountText ()
